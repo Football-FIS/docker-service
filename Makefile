@@ -34,5 +34,17 @@ up-player-logs:
 stop-player:
 	docker compose -f ../player-service/compose.yaml stop
 
+up-all:
+	docker compose -f ../team-service/compose.yaml up -d --build
+	docker compose -f ../match-service/compose.yaml up -d --build
+	docker compose -f ../match-status-service/compose.yaml up -d --build
+	# docker compose -f ../player-service/compose.yaml up -d --build
+
+stop-all:
+	docker compose -f ../team-service/compose.yaml stop
+	docker compose -f ../match-service/compose.yaml stop
+	docker compose -f ../match-status-service/compose.yaml stop
+	# docker compose -f ../player-service/compose.yaml stop
+
 status:
 	docker compose ps

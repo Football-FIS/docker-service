@@ -13,6 +13,8 @@ IF /I "%1"=="stop-match-status" GOTO stop-match-status
 IF /I "%1"=="up-player" GOTO up-player
 IF /I "%1"=="up-player-logs" GOTO up-player-logs
 IF /I "%1"=="stop-player" GOTO stop-player
+IF /I "%1"=="up-all" GOTO up-all
+IF /I "%1"=="stop-all" GOTO stop-all
 IF /I "%1"=="status" GOTO status
 GOTO error
 
@@ -62,6 +64,18 @@ GOTO error
 
 :stop-player
 	docker compose -f ../player-service/compose.yaml stop
+	GOTO :EOF
+
+:up-all
+	docker compose -f ../team-service/compose.yaml up -d --build
+	docker compose -f ../match-service/compose.yaml up -d --build
+	docker compose -f ../match-status-service/compose.yaml up -d --build
+	GOTO :EOF
+
+:stop-all
+	docker compose -f ../team-service/compose.yaml stop
+	docker compose -f ../match-service/compose.yaml stop
+	docker compose -f ../match-status-service/compose.yaml stop
 	GOTO :EOF
 
 :status
