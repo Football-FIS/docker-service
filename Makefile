@@ -1,8 +1,8 @@
 up-team:
-	docker compose -f ../team-service/compose.yaml up -d --build
+	docker compose --env-file ../team-service/.env -f ../team-service/compose.yaml up -d --build
 
 up-team-logs:
-	docker compose -f ../team-service/compose.yaml up --build
+	docker compose --env-file ../team-service/.env -f ../team-service/compose.yaml up --build
 
 stop-team:
 	docker compose -f ../team-service/compose.yaml stop
