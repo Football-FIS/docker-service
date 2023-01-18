@@ -2,23 +2,6 @@
 Este servicio permite lanzar todos los proyectos de la aplicación, e
 interconectarlos.
 
-### Primeros pasos
-
-Debes crear un archivo .env con la misma estructura que .env.example. Lo
-debes rellenar con las url de los distitos servicios.
-
-Por defecto serán las siguientes:
-
-``TEAM_SERVICE_URL=http://localhost:8000/``
-
-``MATCH_SERVICE_URL=http://localhost:8001/``
-
-``MATCH_STATUS_SERVICE_URL=http://localhost:8002/``
-
-``PLAYER_SERVICE_URL=http://localhost:8003/``
-
-__Cuando configures tu compose.yaml acuerdate de colocar el puerto adecuado.__
-
 ### Lanzar servicios
 
 Existen tres posibles acciones para cada servicio
@@ -53,3 +36,13 @@ $ .\make.bat stop-{name} # Detener el servicio.
 $ .\make.bat status # Ver el estados de los servicios.
 ```
 
+Si quieres lanzar todos los proyectos deberás utilizar:
+
+```sh
+$ make up-all
+```
+
+Y si quieres pararlos:
+```sh
+$ make stop-all
+```

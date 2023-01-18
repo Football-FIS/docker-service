@@ -1,0 +1,5 @@
+SECRET_KEY='8*23gd&8$quu(fy6j4$1h24##xv6#@%%d&fd+$0&63e)m4$(!@'
+DEBUG=1
+MONGO_URL='mongodb+srv://match:MWyTtjZTs7i31rnW@match.cnh2f2f.mongodb.net/test?retryWrites=true&w=majority'
+# TEAM_SERV_URL=https://team-service-danaremar.cloud.okteto.net/
+TEAM_SERV_URL=http://localhost:8000/

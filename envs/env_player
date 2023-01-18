@@ -1,0 +1,8 @@
+SECRET_KEY=gjklbhb1iu2g34iup1g23p4iu12h3jkh123uii
+DEBUG=1
+MONGO_URL=mongodb+srv://johnsiel19:John1234@cluster0.nievztx.mongodb.net/footmatch
+PORT=8080
+VERIFY_TOKEN_URL=https://team-service-danaremar.cloud.okteto.net/api/v1/validate-token
+SENDGRID_API_KEY=
+SENDGRID_URL=https://api.sendgrid.com/v3/mail/send
+SENDGRID_SENDER_EMAIL=joscrulor@alum.us.es

@@ -1,0 +1,3 @@
+SECRET_KEY='django-insecure-fp=8b7sf89^vhco$ysfx%=t_(f0k5)sg3-5tgdd8j@$-vl%^*2'
+DEBUG=1
+MONGO_URL='mongodb+srv://matchControl:ContraseñaSuperSegura1234.@cluster0.mrnodxn.mongodb.net/test'
